@@ -1,5 +1,5 @@
 apps:
-  - name: 'Sure Trade Payment Service'
+  - name: 'payment-service'
     script: 'dist/main.js'
     instances: 2
     exec_mode: cluster
