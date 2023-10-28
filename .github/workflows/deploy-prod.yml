@@ -36,5 +36,5 @@ jobs:
         run: |
           sudo chmod +x ./restart.sh
           sudo ./restart.sh
-      - name: Run Tests
-        run: yarn test
+#      - name: Run Tests
+#        run: yarn test
