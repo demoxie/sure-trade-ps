@@ -1,7 +1,7 @@
 apps:
   - name: 'payment-service'
     script: 'dist/main.js'
-    instances: 2
+    instances: 1
     exec_mode: cluster
     max_memory_restart: 1G
     watch: true
@@ -22,18 +22,15 @@ apps:
       NODE_ENV: qa
     env_uat:
       NODE_ENV: uat
-    port: 3002
+    port: 7006
     log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
     merge_logs: false
     log_type: 'json'
     time: true
     wait_ready: true
-    max_restarts: 10
     autorestart: true
-    cron_restart: '0 0 * * *'
-    restart_when_done: false
+    restart_when_done: true
     force: true
     args: '--color'
     node_args: '--max-old-space-size=4096'
-    source_map_support: true
     post_update: ['yarn install']
